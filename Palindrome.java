@@ -1,8 +1,37 @@
+import java.util.Scanner;
+
 public class Palindrome{
 
-	//todo: Create a method isPalindrome which takes a String as input and returns true if it is a palindrome and false otherwise.
-	//A palindrome is a word which can be read backwards and forwards in the same way., e.g. 'hannah'.
-	//Ignore upper and lower case. 'Hannah' is a palindrome, too.
-	//Ignore also spaces. 'Taco cat' is a valid palindrome.
 
+	public static void main(String args[])  
+	   {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the text to be checked for Palindrome");
+		String in =  scan.nextLine(); 
+		
+		System.out.println(isPalindrome(in));
+		
+		
+	   }
+	public static boolean isPalindrome (String input) {
+		
+	      String reverse = "";
+	      boolean a = true;
+	      input = input.toUpperCase(); // changing input to upper case
+	      input= input.replace(" ", ""); // Removing spaces
+	      int length = input.length(); 
+	      
+	      for ( int i = length-1 ; i >= 0; i-- )  
+	         reverse = reverse + input.charAt(i);  
+	      
+	      if (input.equals(reverse))  
+	         System.out.println(a);  
+	      else  
+	         a=false;  
+		return a ;
+		
+	}
+	 
+ 
+	
 }
