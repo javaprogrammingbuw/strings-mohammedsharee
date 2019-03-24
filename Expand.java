@@ -1,20 +1,47 @@
+
 import java.util.Scanner;
 
-//advanced
-
-public class Expand {
+public class Expand {  
+	
+	static String input;
+	static char b;
 	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter String/Text to be Expanded");
+		input = scan.nextLine();
+		char in = Expand(input);
+		System.out.println(in);
+	}	
+
+	public static char Expand(String s){
+	String a=null;
+	for(int i=0;i<input.length();i++){
+		b=input.charAt(i);
+		if(Character.isDigit(b)){
+			a=a+b;
+        }
 		
-		//todo: take as an input a combination of characters and numbers (e.g. 2a3b5c)
-		//expand the String by printing each letter so many times as the number before the letter indicates
-		//e.g. 2a3b5c -> aabbbccccc
-		//Hint: first start with inputs where there is always a number and then a character, then think about how
-		//to improve your code such that you can use values greater or equal 10, eg. 10a13b22c
-		//Further modification: if a character should only be printed one time you don't need to write any number infront of that character
-		//e.g. a3b12cd5e -> abbbccccccccccccdeeeee  
-		
+		else{
+			
+        	int n=Integer.parseInt(a);
+        	if(n==0){
+        		System.out.print(b);
+        		
+        	}
+        	
+        	else
+        		
+        		for(int j=0;j<n;j++){
+        		System.out.print(b);
+        		}
+        	      	
+        	a="0";
+        }
 	}
-	
-}
+	return b;
+	} 
+
+	}
+
