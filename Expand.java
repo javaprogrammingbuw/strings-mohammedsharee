@@ -16,6 +16,9 @@ public class Expand {
 	}	
 
 	public static char Expand(String s){
+
+	//NumberFormatException
+
 	String a=null;
 	for(int i=0;i<input.length();i++){
 		b=input.charAt(i);
